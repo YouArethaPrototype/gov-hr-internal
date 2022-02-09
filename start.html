@@ -1,0 +1,290 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+<!-- back link -->
+{% block beforeContent %}
+<a href="index" class="govuk-back-link">Back</a>
+{% endblock %}
+
+
+<!-- PAGE/Service title -->
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+
+
+      <h2 class="govuk-heading-l">Welcome back, Sandy</h2>
+
+
+
+<!-- CTA BUTTON -->
+
+  <a href="question1" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
+  Create a record
+  <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" role="presentation" focusable="false">
+  <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
+    </svg>
+    </a>
+
+
+
+
+<!-- LIST -->
+
+      <br>
+      <h2 class="govuk-heading-m">List of records</h2>
+<br>
+
+<!-- RECORDED TAB -->
+      <div class="govuk-tabs" data-module="govuk-tabs">
+        <h2 class="govuk-tabs__title">
+          Contents
+        </h2>
+
+        <ul class="govuk-tabs__list">
+          <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+            <a class="govuk-tabs__tab" href="#Absences">
+              Recorded
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#hours">
+              Logged
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#resources">
+              Requested
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#remaining">
+              Allowance
+            </a>
+          </li>
+
+
+        </ul>
+        <div class="govuk-tabs__panel" id="Absences">
+          <h2 class="govuk-heading-l">Absences</h2>
+
+
+<!-- BOOKABLE DAYS -->
+
+<!-- tab info 1 -->
+          <p>
+<tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Bookable days for 2021</td>
+              <br><td class="govuk-table__cell">14<br></td>
+              <br>
+
+              <td class="govuk-table__cell">Total holiday allowance 2021</td>
+              <br><td class="govuk-table__cell">28</td>
+            </p>
+
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Reference</th>
+                <th scope="col" class="govuk-table__header">Details</th>
+                <th scope="col" class="govuk-table__header">Date and time</th>
+                <th scope="col" class="govuk-table__header">Status</th>
+              </tr>
+            </thead>
+
+<!-- row 1 -->
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><a href="#">097464645</a></td>
+                <td class="govuk-table__cell">Booking: Annual leave <br> 17 Oct 2021 - 29 Oct 2021</td>
+                <td class="govuk-table__cell">11 Sept 2021; 11:01</td>
+                <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Approved</strong>
+              </tr>
+
+<!-- row 2 -->
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><a href="#">536374645</a></td>
+                <td class="govuk-table__cell">Booking: Annual leave <br> 17 Oct 2021 - 29 Oct 2021</td>
+                <td class="govuk-table__cell">07 Sept 2021; 09:17</td>
+                <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Approved</strong>
+              </tr>
+
+<!-- row 3 -->
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><a href="#">957563773</a></td>
+                <td class="govuk-table__cell">Booking: Annual leave <br> 17 Oct 2021 - 29 Oct 2021</td>
+                <td class="govuk-table__cell">02 Sept 2021; 12:04</td>
+                <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Approved</strong>
+              </tr>
+            </tbody>
+          </table>
+
+
+<!-- LOGGED TAB -->
+        </div>
+        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
+          <h2 class="govuk-heading-l">Working hours</h2>
+
+<!-- tab info 2 -->
+          <p>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Bookable days for 2021</td>
+              <br><td class="govuk-table__cell">14<br></td>
+              <br>
+
+              <td class="govuk-table__cell">Total holiday allowance 2021</td>
+              <br><td class="govuk-table__cell">28</td>
+            </p>
+
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Case manager</th>
+                <th scope="col" class="govuk-table__header">Cases opened</th>
+                <th scope="col" class="govuk-table__header">Cases closed</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">David Francis</td>
+                <td class="govuk-table__cell">24</td>
+                <td class="govuk-table__cell">18</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Paul Farmer</td>
+                <td class="govuk-table__cell">16</td>
+                <td class="govuk-table__cell">20</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Rita Patel</td>
+                <td class="govuk-table__cell">24</td>
+                <td class="govuk-table__cell">27</td>
+              </tr>
+            </tbody>
+          </table>
+
+
+<!-- REQUESTED TAB -->
+        </div>
+        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-month">
+          <h2 class="govuk-heading-l">Requests</h2>
+
+<!-- tab info 3 -->
+      <p>
+                    <tbody class="govuk-table__body">
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">Bookable days for 2021</td>
+                        <br><td class="govuk-table__cell">14<br></td>
+                        <br>
+
+                        <td class="govuk-table__cell">Total holiday allowance 2021</td>
+                        <br><td class="govuk-table__cell">28</td>
+                      </p>
+
+
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Case manager</th>
+                <th scope="col" class="govuk-table__header">Cases opened</th>
+                <th scope="col" class="govuk-table__header">Cases closed</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">David Francis</td>
+                <td class="govuk-table__cell">98</td>
+                <td class="govuk-table__cell">95</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Paul Farmer</td>
+                <td class="govuk-table__cell">122</td>
+                <td class="govuk-table__cell">131</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Rita Patel</td>
+                <td class="govuk-table__cell">126</td>
+                <td class="govuk-table__cell">142</td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-year">
+          <h2 class="govuk-heading-l">Past year</h2>
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Case manager</th>
+                <th scope="col" class="govuk-table__header">Cases opened</th>
+                <th scope="col" class="govuk-table__header">Cases closed</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">David Francis</td>
+                <td class="govuk-table__cell">1380</td>
+                <td class="govuk-table__cell">1472</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Paul Farmer</td>
+                <td class="govuk-table__cell">1129</td>
+                <td class="govuk-table__cell">1083</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Rita Patel</td>
+                <td class="govuk-table__cell">1539</td>
+                <td class="govuk-table__cell">1265</td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+
+
+
+
+
+<!-- SUBSECTION -->
+<div class="govuk-grid-column-one-third">
+
+      <aside class="app-related-items" role="complementary">
+        <h2 class="govuk-heading-m" id="subsection-title">
+          Subsection
+        </h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="govuk-list govuk-!-font-size-16">
+            <li>
+              <a href="#">
+                Account
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Settings
+              </a>
+            </li>
+            <li>
+              <a href="#" class="govuk-!-font-weight-bold">
+                Sign out <span class="govuk-visually-hidden">in Subsection</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+    </div>
+  </div>
+{% endblock %}
