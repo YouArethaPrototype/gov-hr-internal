@@ -10,23 +10,44 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-xl">
-        The GOV.UK Prototype Kit
+        Sign into the HR portal
         <span class="govuk-caption-xl">{{releaseVersion}}</span>
       </h1>{{releaseVersion | log }}
-      <p>
-        This kit lets you rapidly create HTML prototypes of GOV.UK services.
-      </p>
 
-      <p>
-        It contains all you need to prototype anything from simple static pages to complex, data-driven transactions.
-      </p>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="event-name">
+          Enter username
+        </label>
+        <input class="govuk-input" id="event-name" name="event-name" type="text"></div>
 
-      <h2 class="govuk-heading-m">About this page</h2>
+        <div class="govuk-form-group">
+  <label class="govuk-label" for="event-name">
+    Enter password
+  </label>
+  <input class="govuk-input" id="event-name" name="event-name" type="text"></div>
 
-      <p>We recommend you add links to your prototype to this page, rather than delete it.
-        You'll find this page in the kit at '/app/views/index.html'.</p>
 
-      <p>You can change the service name by editing the file '/app/config.js'.</p>
+<!-- CTA button -->
+
+  <a class="govuk-button" href="start">Sign in</a>
+
+<br>
+<a href="#" class="govuk-link">I forgot my details</a>
+
+<br> </br>
+<br> </br>
+
+
+
+      <h2 class="govuk-heading-m">About this service</h2>
+
+      <p>Use this service to:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Book days off</li>
+        <li>Log working hours</li>
+        <li>Request resources and training</li>
+      </ul>
 
       <h2 class="govuk-heading-m">Examples and documentation</h2>
 
