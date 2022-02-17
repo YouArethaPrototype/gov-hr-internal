@@ -1,0 +1,112 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your answers
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="book-holiday">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-xl">Check your answers</h1>
+
+<!-- TABLE -->
+<!-- ROW 1 -->
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Start date
+          </dt>
+          <dd class="govuk-summary-list__value">
+            17 Oct 2021
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="book-holiday">
+              Change
+              <span class="govuk-visually-hidden">start date</span>
+            </a>
+          </dd>
+        </div>
+
+<!-- ROW 2 -->
+<div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Duration in working days
+          </dt>
+          <dd class="govuk-summary-list__value">
+            10
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="book-holiday">
+              Change
+              <span class="govuk-visually-hidden">duration</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+        </div>
+
+
+<!-- ROW 3 -->
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Calculated end date
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>29 Oct 2021</p>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+          </dd>
+        </div>
+      </dl>
+
+<!-- PANEL3 -->
+<div class="govuk-inset-text">
+You will have <strong>4 days</strong> left to use in 2021 after you click submit.</div>
+
+
+<!-- H2 -->
+      <br>
+      <form class="form" action="/check-answers-book-holiday-answer" method="post">
+        <div class="govuk-form-group">
+      <h2 class="govuk-heading-m">Do you want to create another record?</h2>
+
+
+      <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="create-another-record" name="create-another-record" type="radio" value="No">
+              <label class="govuk-label govuk-radios__label" for="create-another-record">
+                No, return to record log
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="create-another-record-2" name="create-another-record" type="radio" value="Yes">
+              <label class="govuk-label govuk-radios__label" for="create-another-record-2">
+                Yes
+              </label>
+            </div>
+            <br>
+
+
+        <input type="hidden" name="answers-checked" value="true">
+
+<!-- CTA BUTTON -->
+<div class="govuk-button-group">
+    <button class="govuk-button" data-module="govuk-button">
+      Submit Request
+      </button>
+
+        <a class="govuk-link" href="start">Cancel</a>
+        </div>
+      
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}
