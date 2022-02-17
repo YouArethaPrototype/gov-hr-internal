@@ -10,20 +10,42 @@
 {% endblock %}
 
 <!-- back link -->
-{% block beforeContent %}
-<a href="index" class="govuk-back-link">Back</a>
-{% endblock %}
 
+{% block content %}
 
 <!-- PAGE/Service title -->
-{% block content %}
+
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
 
+      <h2 class="govuk-heading-l">Your holiday request has been sent</h2>
 
 
-      <h2 class="govuk-heading-l">Welcome back, Naomi</h2>
+    <!-- CONF PANEL -->
+            <div class="govuk-panel govuk-panel--confirmation">
+              <h1 class="govuk-panel__title">
+                Your holiday request has been sent
+              </h1>
+              <div class="govuk-panel__body">
+                Request number<br><strong>097464645</strong>
+              </div>
+            </div>
 
+<!-- RECORD MESSAGE -->
+
+<details class="govuk-details" data-module="govuk-details">
+<summary class="govuk-details__summary">
+<span class="govuk-details__summary-text">
+View request summary
+</span>
+</summary>
+<div class="govuk-details__text">
+<a href="#">097464645</a>
+<br>
+<p>Booking: Annual leave <br> 17 Oct 2021 - 29 Oct 2021</p>
+<strong class="govuk-tag govuk-tag--blue">Pending</strong>
+</div>
+</details>
 
 
 <!-- CTA BUTTON -->
@@ -49,33 +71,27 @@
         <h2 class="govuk-tabs__title">
           Contents
         </h2>
-
         <ul class="govuk-tabs__list">
           <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-            <a class="govuk-tabs__tab" href="#Absences">
+            <a class="govuk-tabs__tab" href="#past-day">
               Recorded
             </a>
           </li>
           <li class="govuk-tabs__list-item">
-            <a class="govuk-tabs__tab" href="#hours">
+            <a class="govuk-tabs__tab" href="#past-week">
               Logged
             </a>
           </li>
           <li class="govuk-tabs__list-item">
-            <a class="govuk-tabs__tab" href="#resources">
+            <a class="govuk-tabs__tab" href="#past-month">
               Requested
-            </a>
-          </li>
-          <li class="govuk-tabs__list-item">
-            <a class="govuk-tabs__tab" href="#remaining">
-              Allowance
             </a>
           </li>
 
 
         </ul>
-        <div class="govuk-tabs__panel" id="Absences">
-          <h2 class="govuk-heading-l">Absences</h2>
+        <div class="govuk-tabs__panel" id="past-day">
+          <h3 class="govuk-heading-l">Absences</h3>
 
 
 <!-- BOOKABLE DAYS -->
@@ -108,7 +124,7 @@
                 <td class="govuk-table__cell"><a href="#">097464645</a></td>
                 <td class="govuk-table__cell">Booking: Annual leave <br> 17 Oct 2021 - 29 Oct 2021</td>
                 <td class="govuk-table__cell">11 Sept 2021; 11:01</td>
-                <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Approved</strong>
+                <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--blue">Pending</strong>
               </tr>
 
 <!-- row 2 -->
@@ -256,9 +272,9 @@
 
 
 
+    </div>
 
-<!-- SUBSECTION -->
-<div class="govuk-grid-column-one-third">
+    <div class="govuk-grid-column-one-third">
 
       <aside class="app-related-items" role="complementary">
         <h2 class="govuk-heading-m" id="subsection-title">

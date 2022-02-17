@@ -1,0 +1,108 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your answers
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="training-dates">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-xl">Check your answers</h1>
+
+<!-- TABLE -->
+<!-- ROW 1 -->
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Training category
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Orientation
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="request-training">
+              Change
+              <span class="govuk-visually-hidden">start date</span>
+            </a>
+          </dd>
+        </div>
+
+<!-- ROW 2 -->
+<div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Provide more detail
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="training-details">
+              Change
+              <span class="govuk-visually-hidden">duration</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+        </div>
+
+
+<!-- ROW 3 -->
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Training date(s)
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>29 Oct 2021</p>
+            <p>29 Oct 2021</p>
+            <p>29 Oct 2021</p>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="training-dates">
+              Change
+              <span class="govuk-visually-hidden">duration</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+
+
+<!-- H2 -->
+      <form class="form" action="/check-answers-book-holiday-answer" method="post">
+        <div class="govuk-form-group">
+      <h2 class="govuk-heading-m">Do you want to create another record?</h2>
+
+
+      <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="create-another-record" name="create-another-record" type="radio" value="No">
+              <label class="govuk-label govuk-radios__label" for="create-another-record">
+                No, return to record log
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="create-another-record-2" name="create-another-record" type="radio" value="Yes">
+              <label class="govuk-label govuk-radios__label" for="create-another-record-2">
+                Yes
+              </label>
+            </div>
+            <br>
+
+
+        <input type="hidden" name="answers-checked" value="true">
+
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Submit
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

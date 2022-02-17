@@ -1,0 +1,89 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="record-type">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Request training </h1>
+
+
+<!-- Radios 1 -->
+
+        <form class="form" action="/training-details" method="post">
+          <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend">
+      Training categories
+    </legend>
+    <div class="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="training-categories" name="training-categories" type="radio" value="orientation">
+        <label class="govuk-label govuk-radios__label" for="training-categories">
+          Orientation
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="training-categories-2" name="training-categories" type="radio" value="onboarding">
+        <label class="govuk-label govuk-radios__label" for="training-categories-2">
+          Onboarding
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="training-categories-3" name="training-categories" type="radio" value="technical">
+        <label class="govuk-label govuk-radios__label" for="training-categories-3">
+          Technical skills development
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="training-categories-4" name="training-categories" type="radio" value="soft">
+        <label class="govuk-label govuk-radios__label" for="training-categories-4">
+          Soft skills development
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="training-categories-4" name="training-categories" type="radio" value="team">
+        <label class="govuk-label govuk-radios__label" for="training-categories-4">
+          Team training
+        </label>
+        </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="what-do-you-want-to-record-4" name="what-do-you-want-to-record" type="radio" value="products-services">
+        <label class="govuk-label govuk-radios__label" for="what-do-you-want-to-record-4">
+          Products and services training
+        </label>
+        </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="what-do-you-want-to-record-4" name="what-do-you-want-to-record" type="radio" value="quality">
+        <label class="govuk-label govuk-radios__label" for="what-do-you-want-to-record-4">
+          Quality training
+        </label>
+        </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="what-do-you-want-to-record-4" name="what-do-you-want-to-record" type="radio" value="safety">
+        <label class="govuk-label govuk-radios__label" for="what-do-you-want-to-record-4">
+          Safety training
+        </label>
+      </div>
+    </div>
+
+  </fieldset>
+</div>
+
+<!-- CTA BUTTON -->
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
